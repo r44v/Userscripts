@@ -8,6 +8,7 @@
 // @grant        none
 // ==/UserScript==
 
-$(function() {
+$(document).ready(function() {
+    'use strict';
     $("#comic").append("<hr /><p>" + $("#comic img").attr('title') + "</p><hr />");
-})();
+});
