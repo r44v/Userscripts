@@ -30,6 +30,8 @@
             element.classList.add("mermaid");
             console.log("Create mermaid block");
         });
+
+        window.mermaid.init();
     }
 
     const observer = new MutationObserver(() => {
