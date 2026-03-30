@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Azure DevOps Mermaid Renderer
-// @namespace    https://github.com/yourusername/userscripts
+// @namespace    https://github.com/r44v/userscripts
 // @version      1.0
 // @description  Render Mermaid diagrams in Azure DevOps markdown previews
-// @author       You
+// @author       r44v
 // @match        *://dev.azure.com/*
 // @match        *://app.vssps.visualstudio.com/*
 // @grant        none
@@ -13,7 +13,7 @@
 (function() {
     const mermaidScript = document.createElement('script');
     mermaidScript.type = "module";
-    mermaidScript.text = "import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs'; window.mermaid = mermaid; window.mermaid.initialize({ startOnLoad: true });";
+    mermaidScript.text = "import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs'; window.mermaid = mermaid; window.mermaid.initialize({ startOnLoad: true, theme: 'default' });";
     document.head.appendChild(mermaidScript);
 
     function renderDiagrams() {
